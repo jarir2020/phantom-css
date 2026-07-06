@@ -1,0 +1,20 @@
+{
+  "name": "@jarir2020/phantom-css",
+  "version": "0.1.2",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "phantom": "bin/phantom.js",
+    "phantom-css": "bin/phantom.js"
+  },
+  "dependencies": {
+    "@phantom-css/adapters": "0.1.1",
+    "@phantom-css/cli": "0.1.2",
+    "@phantom-css/core": "0.1.1",
+    "@phantom-css/presets": "0.1.1",
+    "@phantom-css/web": "0.1.1"
+  },
+  "scripts": {
+    "test": "node test.js"
+  }
+}
