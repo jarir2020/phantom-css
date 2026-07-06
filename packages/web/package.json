@@ -1,0 +1,21 @@
+{
+  "name": "@phantom-css/web",
+  "version": "0.1.1",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./preview": "./src/preview.js",
+    "./static": "./src/static.js",
+    "./server": "./src/server.js",
+    "./watch": "./src/watch.js"
+  },
+  "dependencies": {
+    "@phantom-css/core": "0.1.0",
+    "@phantom-css/presets": "0.1.0",
+    "@phantom-css/adapters": "0.1.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@phantom-css/cli",
+  "version": "0.1.2",
+  "type": "module",
+  "bin": {
+    "phantom": "src/index.js"
+  },
+  "dependencies": {
+    "@phantom-css/adapters": "0.1.1",
+    "@phantom-css/core": "0.1.1",
+    "@phantom-css/presets": "0.1.1",
+    "@phantom-css/web": "0.1.1"
+  },
+  "scripts": {
+    "test": "node test.js"
+  }
+}

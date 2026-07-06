@@ -1,0 +1,23 @@
+{
+  "name": "@phantom-css/adapters",
+  "version": "0.1.1",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./react": "./src/frameworks/react.js",
+    "./vue": "./src/frameworks/vue.js",
+    "./next": "./src/frameworks/next.js",
+    "./nuxt": "./src/frameworks/nuxt.js",
+    "./svelte": "./src/frameworks/svelte.js",
+    "./angular": "./src/frameworks/angular.js",
+    "./laravel": "./src/frameworks/laravel.js",
+    "./plain": "./src/frameworks/plain.js"
+  },
+  "dependencies": {
+    "@phantom-css/core": "0.1.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  }
+}

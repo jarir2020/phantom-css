@@ -1,0 +1,398 @@
+{
+  "name": "Phantom CSS Preview Manifest",
+  "version": "1.0.0",
+  "themes": [
+    "light",
+    "dark",
+    "neutral",
+    "brand",
+    "ocean",
+    "forest",
+    "sunset",
+    "midnight",
+    "slate",
+    "sand",
+    "mint",
+    "coral",
+    "royal",
+    "graphite",
+    "pearl",
+    "aurora",
+    "ember",
+    "meadow",
+    "plum",
+    "cobalt",
+    "sunrise",
+    "twilight",
+    "mono",
+    "vintage",
+    "glass",
+    "neon",
+    "autumn",
+    "summer",
+    "winter",
+    "terminal"
+  ],
+  "semanticElements": [
+    "html",
+    "body",
+    "header",
+    "nav",
+    "main",
+    "footer",
+    "section",
+    "article",
+    "aside",
+    "button",
+    "a",
+    "input",
+    "select",
+    "textarea",
+    "label",
+    "table",
+    "thead",
+    "tbody",
+    "tr",
+    "th",
+    "td",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "p",
+    "code",
+    "pre",
+    "blockquote",
+    "form"
+  ],
+  "pages": [
+    {
+      "name": "theme-gallery",
+      "title": "Theme Gallery",
+      "description": "Preview all preset themes in one place.",
+      "route": "/preview/themes",
+      "cards": [
+        {
+          "theme": "light",
+          "title": "light theme",
+          "sample": "<section class=\"ui-card light\">Preview light</section>"
+        },
+        {
+          "theme": "dark",
+          "title": "dark theme",
+          "sample": "<section class=\"ui-card dark\">Preview dark</section>"
+        },
+        {
+          "theme": "neutral",
+          "title": "neutral theme",
+          "sample": "<section class=\"ui-card neutral\">Preview neutral</section>"
+        },
+        {
+          "theme": "brand",
+          "title": "brand theme",
+          "sample": "<section class=\"ui-card brand\">Preview brand</section>"
+        },
+        {
+          "theme": "ocean",
+          "title": "ocean theme",
+          "sample": "<section class=\"ui-card ocean\">Preview ocean</section>"
+        },
+        {
+          "theme": "forest",
+          "title": "forest theme",
+          "sample": "<section class=\"ui-card forest\">Preview forest</section>"
+        },
+        {
+          "theme": "sunset",
+          "title": "sunset theme",
+          "sample": "<section class=\"ui-card sunset\">Preview sunset</section>"
+        },
+        {
+          "theme": "midnight",
+          "title": "midnight theme",
+          "sample": "<section class=\"ui-card midnight\">Preview midnight</section>"
+        },
+        {
+          "theme": "slate",
+          "title": "slate theme",
+          "sample": "<section class=\"ui-card slate\">Preview slate</section>"
+        },
+        {
+          "theme": "sand",
+          "title": "sand theme",
+          "sample": "<section class=\"ui-card sand\">Preview sand</section>"
+        },
+        {
+          "theme": "mint",
+          "title": "mint theme",
+          "sample": "<section class=\"ui-card mint\">Preview mint</section>"
+        },
+        {
+          "theme": "coral",
+          "title": "coral theme",
+          "sample": "<section class=\"ui-card coral\">Preview coral</section>"
+        },
+        {
+          "theme": "royal",
+          "title": "royal theme",
+          "sample": "<section class=\"ui-card royal\">Preview royal</section>"
+        },
+        {
+          "theme": "graphite",
+          "title": "graphite theme",
+          "sample": "<section class=\"ui-card graphite\">Preview graphite</section>"
+        },
+        {
+          "theme": "pearl",
+          "title": "pearl theme",
+          "sample": "<section class=\"ui-card pearl\">Preview pearl</section>"
+        },
+        {
+          "theme": "aurora",
+          "title": "aurora theme",
+          "sample": "<section class=\"ui-card aurora\">Preview aurora</section>"
+        },
+        {
+          "theme": "ember",
+          "title": "ember theme",
+          "sample": "<section class=\"ui-card ember\">Preview ember</section>"
+        },
+        {
+          "theme": "meadow",
+          "title": "meadow theme",
+          "sample": "<section class=\"ui-card meadow\">Preview meadow</section>"
+        },
+        {
+          "theme": "plum",
+          "title": "plum theme",
+          "sample": "<section class=\"ui-card plum\">Preview plum</section>"
+        },
+        {
+          "theme": "cobalt",
+          "title": "cobalt theme",
+          "sample": "<section class=\"ui-card cobalt\">Preview cobalt</section>"
+        },
+        {
+          "theme": "sunrise",
+          "title": "sunrise theme",
+          "sample": "<section class=\"ui-card sunrise\">Preview sunrise</section>"
+        },
+        {
+          "theme": "twilight",
+          "title": "twilight theme",
+          "sample": "<section class=\"ui-card twilight\">Preview twilight</section>"
+        },
+        {
+          "theme": "mono",
+          "title": "mono theme",
+          "sample": "<section class=\"ui-card mono\">Preview mono</section>"
+        },
+        {
+          "theme": "vintage",
+          "title": "vintage theme",
+          "sample": "<section class=\"ui-card vintage\">Preview vintage</section>"
+        },
+        {
+          "theme": "glass",
+          "title": "glass theme",
+          "sample": "<section class=\"ui-card glass\">Preview glass</section>"
+        },
+        {
+          "theme": "neon",
+          "title": "neon theme",
+          "sample": "<section class=\"ui-card neon\">Preview neon</section>"
+        },
+        {
+          "theme": "autumn",
+          "title": "autumn theme",
+          "sample": "<section class=\"ui-card autumn\">Preview autumn</section>"
+        },
+        {
+          "theme": "summer",
+          "title": "summer theme",
+          "sample": "<section class=\"ui-card summer\">Preview summer</section>"
+        },
+        {
+          "theme": "winter",
+          "title": "winter theme",
+          "sample": "<section class=\"ui-card winter\">Preview winter</section>"
+        },
+        {
+          "theme": "terminal",
+          "title": "terminal theme",
+          "sample": "<section class=\"ui-card terminal\">Preview terminal</section>"
+        }
+      ]
+    },
+    {
+      "name": "semantic-elements",
+      "title": "Semantic Elements",
+      "description": "Preview the element-to-theme mappings that cover common HTML tags.",
+      "route": "/preview/elements",
+      "elements": [
+        {
+          "tag": "html",
+          "mapping": "html",
+          "sample": "<html>html</html>"
+        },
+        {
+          "tag": "body",
+          "mapping": "body",
+          "sample": "<body>body</body>"
+        },
+        {
+          "tag": "header",
+          "mapping": "header",
+          "sample": "<header>header</header>"
+        },
+        {
+          "tag": "nav",
+          "mapping": "nav",
+          "sample": "<nav>nav</nav>"
+        },
+        {
+          "tag": "main",
+          "mapping": "main",
+          "sample": "<main>main</main>"
+        },
+        {
+          "tag": "footer",
+          "mapping": "footer",
+          "sample": "<footer>footer</footer>"
+        },
+        {
+          "tag": "section",
+          "mapping": "section",
+          "sample": "<section>section</section>"
+        },
+        {
+          "tag": "article",
+          "mapping": "article",
+          "sample": "<article>article</article>"
+        },
+        {
+          "tag": "aside",
+          "mapping": "aside",
+          "sample": "<aside>aside</aside>"
+        },
+        {
+          "tag": "button",
+          "mapping": "button",
+          "sample": "<button>button</button>"
+        },
+        {
+          "tag": "a",
+          "mapping": "a",
+          "sample": "<a>a</a>"
+        },
+        {
+          "tag": "input",
+          "mapping": "input",
+          "sample": "<input>input</input>"
+        },
+        {
+          "tag": "select",
+          "mapping": "select",
+          "sample": "<select>select</select>"
+        },
+        {
+          "tag": "textarea",
+          "mapping": "textarea",
+          "sample": "<textarea>textarea</textarea>"
+        },
+        {
+          "tag": "label",
+          "mapping": "label",
+          "sample": "<label>label</label>"
+        },
+        {
+          "tag": "table",
+          "mapping": "table",
+          "sample": "<table>table</table>"
+        },
+        {
+          "tag": "thead",
+          "mapping": "thead",
+          "sample": "<thead>thead</thead>"
+        },
+        {
+          "tag": "tbody",
+          "mapping": "tbody",
+          "sample": "<tbody>tbody</tbody>"
+        },
+        {
+          "tag": "tr",
+          "mapping": "tr",
+          "sample": "<tr>tr</tr>"
+        },
+        {
+          "tag": "th",
+          "mapping": "th",
+          "sample": "<th>th</th>"
+        },
+        {
+          "tag": "td",
+          "mapping": "td",
+          "sample": "<td>td</td>"
+        },
+        {
+          "tag": "h1",
+          "mapping": "h1",
+          "sample": "<h1>h1</h1>"
+        },
+        {
+          "tag": "h2",
+          "mapping": "h2",
+          "sample": "<h2>h2</h2>"
+        },
+        {
+          "tag": "h3",
+          "mapping": "h3",
+          "sample": "<h3>h3</h3>"
+        },
+        {
+          "tag": "h4",
+          "mapping": "h4",
+          "sample": "<h4>h4</h4>"
+        },
+        {
+          "tag": "h5",
+          "mapping": "h5",
+          "sample": "<h5>h5</h5>"
+        },
+        {
+          "tag": "h6",
+          "mapping": "h6",
+          "sample": "<h6>h6</h6>"
+        },
+        {
+          "tag": "p",
+          "mapping": "p",
+          "sample": "<p>p</p>"
+        },
+        {
+          "tag": "code",
+          "mapping": "code",
+          "sample": "<code>code</code>"
+        },
+        {
+          "tag": "pre",
+          "mapping": "pre",
+          "sample": "<pre>pre</pre>"
+        },
+        {
+          "tag": "blockquote",
+          "mapping": "blockquote",
+          "sample": "<blockquote>blockquote</blockquote>"
+        },
+        {
+          "tag": "form",
+          "mapping": "form",
+          "sample": "<form>form</form>"
+        }
+      ]
+    }
+  ]
+}

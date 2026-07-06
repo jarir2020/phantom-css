@@ -1,0 +1,23 @@
+{
+  "name": "@phantom-css/presets",
+  "version": "0.1.1",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./all": "./src/all.js",
+    "./light": "./src/light.js",
+    "./dark": "./src/dark.js",
+    "./neutral": "./src/neutral.js",
+    "./brand": "./src/brand.js",
+    "./library": "./src/library.js",
+    "./semantic": "./src/semantic.js",
+    "./preview": "./src/preview.js"
+  },
+  "dependencies": {
+    "@phantom-css/core": "0.1.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  }
+}

@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phantom CSS Preview</title>
+  <style>
+    :root { --pc-color-primary-50: #eff6ff; }
+:root { --pc-color-primary-500: #3b82f6; }
+:root { --pc-color-primary-900: #1e3a8a; }
+:root { --pc-color-neutral-50: #fafafa; }
+:root { --pc-color-neutral-900: #171717; }
+:root { --pc-spacing-0: 0; }
+:root { --pc-spacing-1: 0.25rem; }
+:root { --pc-spacing-2: 0.5rem; }
+:root { --pc-spacing-4: 1rem; }
+:root { --pc-spacing-6: 1.5rem; }
+:root { --pc-spacing-8: 2rem; }
+:root { --pc-font-family-sans: Inter, sans-serif; }
+:root { --pc-font-family-mono: ui-monospace, monospace; }
+:root { --pc-font-size-sm: 0.875rem; }
+:root { --pc-font-size-base: 1rem; }
+:root { --pc-font-size-lg: 1.125rem; }
+:root { --pc-font-size-xl: 1.25rem; }
+:root { --pc-line-height-tight: 1.25; }
+:root { --pc-line-height-normal: 1.5; }
+:root { --pc-line-height-relaxed: 1.75; }
+:root { --pc-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.05); }
+:root { --pc-shadow-md: 0 4px 6px rgb(0 0 0 / 0.1); }
+:root { --pc-radius-sm: 0.25rem; }
+:root { --pc-radius-md: 0.5rem; }
+:root { --pc-radius-lg: 0.75rem; }
+:root { --pc-radius-full: 9999px; }
+:root { --pc-motion-fast: 120ms; }
+:root { --pc-motion-normal: 180ms; }
+:root { --pc-motion-slow: 240ms; }
+:root { --pc-z-index-base: 0; }
+:root { --pc-z-index-dropdown: 1000; }
+:root { --pc-z-index-modal: 2000; }
+:root { --pc-z-index-toast: 3000; }
+:root { --pc-breakpoint-sm: 640px; }
+:root { --pc-breakpoint-md: 768px; }
+:root { --pc-breakpoint-lg: 1024px; }
+:root { --pc-breakpoint-xl: 1280px; }
+:root { --pc-container-sm: 640px; }
+:root { --pc-container-md: 768px; }
+:root { --pc-container-lg: 1024px; }
+:root { --pc-container-xl: 1280px; }
+:root { --pc-border-thin: 1px; }
+:root { --pc-border-medium: 2px; }
+:root { --pc-border-thick: 4px; }
+:root { --pc-opacity-0: 0; }
+:root { --pc-opacity-50: 0.5; }
+:root { --pc-opacity-100: 1; }
+:root { --pc-blur-none: 0; }
+:root { --pc-blur-sm: 4px; }
+:root { --pc-blur-md: 8px; }
+[data-theme="dark"] { --pc-color-primary-50: #dbeafe; }
+[data-theme="dark"] { --pc-color-primary-500: #60a5fa; }
+[data-theme="dark"] { --pc-color-primary-900: #0f172a; }
+[data-theme="dark"] { --pc-color-neutral-50: #e5e5e5; }
+[data-theme="dark"] { --pc-color-neutral-900: #0a0a0a; }
+[data-theme="dark"] { --pc-spacing: undefined; }
+[data-theme="dark"] { --pc-font-family: undefined; }
+[data-theme="dark"] { --pc-font-size: undefined; }
+[data-theme="dark"] { --pc-line-height: undefined; }
+[data-theme="dark"] { --pc-shadow: undefined; }
+[data-theme="dark"] { --pc-radius: undefined; }
+[data-theme="dark"] { --pc-motion: undefined; }
+[data-theme="dark"] { --pc-z-index: undefined; }
+[data-theme="dark"] { --pc-breakpoint: undefined; }
+[data-theme="dark"] { --pc-container: undefined; }
+[data-theme="dark"] { --pc-border: undefined; }
+[data-theme="dark"] { --pc-opacity: undefined; }
+[data-theme="dark"] { --pc-blur: undefined; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-4 { gap: var(--pc-spacing-4); }
+.p-4 { padding: var(--pc-spacing-4); }
+.px-6 { padding-left: var(--pc-spacing-6); padding-right: var(--pc-spacing-6); }
+.py-2 { padding-top: var(--pc-spacing-2); padding-bottom: var(--pc-spacing-2); }
+.text-sm { font-size: var(--pc-font-size-sm); }
+.font-medium { font-weight: 500; }
+.rounded-lg { border-radius: var(--pc-radius-lg); }
+.shadow-md { box-shadow: var(--pc-shadow-md); }
+.bg-primary-50 { background-color: #eff6ff; }
+.bg-primary-500 { background-color: #3b82f6; }
+.bg-primary-900 { background-color: #1e3a8a; }
+.bg-neutral-50 { background-color: #fafafa; }
+.bg-neutral-900 { background-color: #171717; }
+:root { --pc-space-0: 0; }
+:root { --pc-space-1: 0.25rem; }
+:root { --pc-space-2: 0.5rem; }
+:root { --pc-space-4: 1rem; }
+:root { --pc-space-6: 1.5rem; }
+:root { --pc-space-8: 2rem; }
+.ui-button { display: inline-flex; align-items: center; justify-content: center; padding: var(--pc-spacing-2) var(--pc-spacing-4); border-radius: var(--pc-radius-md); background: var(--pc-color-primary-500); color: white; }
+.ui-card { background: white; border-radius: var(--pc-radius-lg); box-shadow: var(--pc-shadow-md); padding: var(--pc-spacing-4); }
+.ui-input { border: 1px solid var(--pc-color-neutral-200); border-radius: var(--pc-radius-md); padding: var(--pc-spacing-2) var(--pc-spacing-3); }
+    :root {
+      --preview-bg: #020617;
+      --preview-panel: rgba(15, 23, 42, 0.72);
+      --preview-border: rgba(148, 163, 184, 0.2);
+      --preview-text: #e2e8f0;
+      --preview-muted: #94a3b8;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: radial-gradient(circle at top, #1e293b, #020617 55%);
+      color: var(--preview-text);
+    }
+    .preview-shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 32px;
+    }
+    .preview-hero {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .theme-card, .semantic-panel {
+      background: var(--preview-panel);
+      border: 1px solid var(--preview-border);
+      border-radius: 18px;
+      padding: 18px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+    }
+    .theme-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      text-transform: capitalize;
+    }
+    .theme-card__badge, .semantic-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.14);
+      color: var(--preview-text);
+      font-size: 12px;
+    }
+    .theme-card__swatch {
+      height: 64px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--preview-accent), var(--preview-surface));
+      margin-bottom: 12px;
+    }
+    .theme-card__sample {
+      color: var(--preview-muted);
+      margin: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px 10px;
+      text-align: left;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+      vertical-align: top;
+    }
+    code {
+      background: rgba(15, 23, 42, 0.6);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <main class="preview-shell">
+    <section class="preview-hero">
+      <h1>Phantom CSS Preview</h1>
+      <p>30 preset themes and semantic element mappings rendered automatically from the theme pack.</p>
+    </section>
+
+    <section>
+      <h2>Theme Gallery</h2>
+      <div class="preview-grid">
+        
+    <article class="ui-card theme-card" data-theme="light" style="--preview-accent:#3b82f6;--preview-surface:#f8fafc;--preview-text:#0f172a">
+      <header class="theme-card__header">
+        <strong>light</strong>
+        <span class="theme-card__badge">light</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="dark" style="--preview-accent:#60a5fa;--preview-surface:#0f172a;--preview-text:#f8fafc">
+      <header class="theme-card__header">
+        <strong>dark</strong>
+        <span class="theme-card__badge">dark</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="neutral" style="--preview-accent:#64748b;--preview-surface:#f9fafb;--preview-text:#111827">
+      <header class="theme-card__header">
+        <strong>neutral</strong>
+        <span class="theme-card__badge">neutral</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="brand" style="--preview-accent:#f97316;--preview-surface:#fefce8;--preview-text:#422006">
+      <header class="theme-card__header">
+        <strong>brand</strong>
+        <span class="theme-card__badge">brand</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="ocean" style="--preview-accent:#0ea5e9;--preview-surface:#eef6ff;--preview-text:#082f49">
+      <header class="theme-card__header">
+        <strong>ocean</strong>
+        <span class="theme-card__badge">ocean</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="forest" style="--preview-accent:#22c55e;--preview-surface:#edf7ed;--preview-text:#14532d">
+      <header class="theme-card__header">
+        <strong>forest</strong>
+        <span class="theme-card__badge">forest</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="sunset" style="--preview-accent:#fb923c;--preview-surface:#fff1eb;--preview-text:#7c2d12">
+      <header class="theme-card__header">
+        <strong>sunset</strong>
+        <span class="theme-card__badge">sunset</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="midnight" style="--preview-accent:#38bdf8;--preview-surface:#111827;--preview-text:#f9fafb">
+      <header class="theme-card__header">
+        <strong>midnight</strong>
+        <span class="theme-card__badge">midnight</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="slate" style="--preview-accent:#64748b;--preview-surface:#f1f5f9;--preview-text:#0f172a">
+      <header class="theme-card__header">
+        <strong>slate</strong>
+        <span class="theme-card__badge">slate</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="sand" style="--preview-accent:#d97706;--preview-surface:#fef3c7;--preview-text:#78350f">
+      <header class="theme-card__header">
+        <strong>sand</strong>
+        <span class="theme-card__badge">sand</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="mint" style="--preview-accent:#10b981;--preview-surface:#ecfdf5;--preview-text:#064e3b">
+      <header class="theme-card__header">
+        <strong>mint</strong>
+        <span class="theme-card__badge">mint</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="coral" style="--preview-accent:#f43f5e;--preview-surface:#ffe4e6;--preview-text:#881337">
+      <header class="theme-card__header">
+        <strong>coral</strong>
+        <span class="theme-card__badge">coral</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="royal" style="--preview-accent:#8b5cf6;--preview-surface:#ede9fe;--preview-text:#312e81">
+      <header class="theme-card__header">
+        <strong>royal</strong>
+        <span class="theme-card__badge">royal</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="graphite" style="--preview-accent:#71717a;--preview-surface:#18181b;--preview-text:#fafafa">
+      <header class="theme-card__header">
+        <strong>graphite</strong>
+        <span class="theme-card__badge">graphite</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="pearl" style="--preview-accent:#94a3b8;--preview-surface:#f8fafc;--preview-text:#0f172a">
+      <header class="theme-card__header">
+        <strong>pearl</strong>
+        <span class="theme-card__badge">pearl</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="aurora" style="--preview-accent:#38bdf8;--preview-surface:#e0f2fe;--preview-text:#0f172a">
+      <header class="theme-card__header">
+        <strong>aurora</strong>
+        <span class="theme-card__badge">aurora</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="ember" style="--preview-accent:#f97316;--preview-surface:#ffedd5;--preview-text:#7c2d12">
+      <header class="theme-card__header">
+        <strong>ember</strong>
+        <span class="theme-card__badge">ember</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="meadow" style="--preview-accent:#22c55e;--preview-surface:#ecfdf5;--preview-text:#14532d">
+      <header class="theme-card__header">
+        <strong>meadow</strong>
+        <span class="theme-card__badge">meadow</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="plum" style="--preview-accent:#a855f7;--preview-surface:#f3e8ff;--preview-text:#581c87">
+      <header class="theme-card__header">
+        <strong>plum</strong>
+        <span class="theme-card__badge">plum</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="cobalt" style="--preview-accent:#2563eb;--preview-surface:#dbeafe;--preview-text:#1e3a8a">
+      <header class="theme-card__header">
+        <strong>cobalt</strong>
+        <span class="theme-card__badge">cobalt</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="sunrise" style="--preview-accent:#fb923c;--preview-surface:#ffedd5;--preview-text:#7c2d12">
+      <header class="theme-card__header">
+        <strong>sunrise</strong>
+        <span class="theme-card__badge">sunrise</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="twilight" style="--preview-accent:#6366f1;--preview-surface:#ede9fe;--preview-text:#312e81">
+      <header class="theme-card__header">
+        <strong>twilight</strong>
+        <span class="theme-card__badge">twilight</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="mono" style="--preview-accent:#9ca3af;--preview-surface:#111827;--preview-text:#e5e7eb">
+      <header class="theme-card__header">
+        <strong>mono</strong>
+        <span class="theme-card__badge">mono</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="vintage" style="--preview-accent:#a16207;--preview-surface:#fef7ed;--preview-text:#3f2d20">
+      <header class="theme-card__header">
+        <strong>vintage</strong>
+        <span class="theme-card__badge">vintage</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="glass" style="--preview-accent:#38bdf8;--preview-surface:rgba(255,255,255,0.55);--preview-text:#0f172a">
+      <header class="theme-card__header">
+        <strong>glass</strong>
+        <span class="theme-card__badge">glass</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="neon" style="--preview-accent:#22d3ee;--preview-surface:#0f172a;--preview-text:#e2e8f0">
+      <header class="theme-card__header">
+        <strong>neon</strong>
+        <span class="theme-card__badge">neon</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="autumn" style="--preview-accent:#ea580c;--preview-surface:#ffedd5;--preview-text:#7c2d12">
+      <header class="theme-card__header">
+        <strong>autumn</strong>
+        <span class="theme-card__badge">autumn</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="summer" style="--preview-accent:#06b6d4;--preview-surface:#ecfeff;--preview-text:#164e63">
+      <header class="theme-card__header">
+        <strong>summer</strong>
+        <span class="theme-card__badge">summer</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="winter" style="--preview-accent:#60a5fa;--preview-surface:#e0f2fe;--preview-text:#0f172a">
+      <header class="theme-card__header">
+        <strong>winter</strong>
+        <span class="theme-card__badge">winter</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+
+    <article class="ui-card theme-card" data-theme="terminal" style="--preview-accent:#22c55e;--preview-surface:#0f172a;--preview-text:#22c55e">
+      <header class="theme-card__header">
+        <strong>terminal</strong>
+        <span class="theme-card__badge">terminal</span>
+      </header>
+      <div class="theme-card__swatch"></div>
+      <p class="theme-card__sample">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  
+      </div>
+    </section>
+
+    <section style="margin-top: 32px;">
+      <h2>Semantic Mappings</h2>
+      <div class="semantic-panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Role</th>
+              <th>Theme</th>
+              <th>Class</th>
+              <th>Preview</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+    <tr>
+      <th><code>&lt;html&gt;</code></th>
+      <td>document</td>
+      <td><span class="semantic-pill">neutral</span></td>
+      <td><span class="semantic-pill">pc-doc-root</span></td>
+      <td><html class="pc-doc-root">html</html></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;body&gt;</code></th>
+      <td>page</td>
+      <td><span class="semantic-pill">light</span></td>
+      <td><span class="semantic-pill">pc-page</span></td>
+      <td><body class="pc-page">body</body></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;header&gt;</code></th>
+      <td>banner</td>
+      <td><span class="semantic-pill">brand</span></td>
+      <td><span class="semantic-pill">pc-banner</span></td>
+      <td><header class="pc-banner">header</header></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;nav&gt;</code></th>
+      <td>navigation</td>
+      <td><span class="semantic-pill">slate</span></td>
+      <td><span class="semantic-pill">pc-nav</span></td>
+      <td><nav class="pc-nav">nav</nav></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;main&gt;</code></th>
+      <td>main</td>
+      <td><span class="semantic-pill">light</span></td>
+      <td><span class="semantic-pill">pc-main</span></td>
+      <td><main class="pc-main">main</main></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;footer&gt;</code></th>
+      <td>contentinfo</td>
+      <td><span class="semantic-pill">graphite</span></td>
+      <td><span class="semantic-pill">pc-footer</span></td>
+      <td><footer class="pc-footer">footer</footer></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;section&gt;</code></th>
+      <td>region</td>
+      <td><span class="semantic-pill">neutral</span></td>
+      <td><span class="semantic-pill">pc-section</span></td>
+      <td><section class="pc-section">section</section></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;article&gt;</code></th>
+      <td>article</td>
+      <td><span class="semantic-pill">pearl</span></td>
+      <td><span class="semantic-pill">pc-article</span></td>
+      <td><article class="pc-article">article</article></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;aside&gt;</code></th>
+      <td>complementary</td>
+      <td><span class="semantic-pill">glass</span></td>
+      <td><span class="semantic-pill">pc-aside</span></td>
+      <td><aside class="pc-aside">aside</aside></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;button&gt;</code></th>
+      <td>button</td>
+      <td><span class="semantic-pill">brand</span></td>
+      <td><span class="semantic-pill">ui-button</span></td>
+      <td><button class="ui-button">button</button></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;a&gt;</code></th>
+      <td>link</td>
+      <td><span class="semantic-pill">ocean</span></td>
+      <td><span class="semantic-pill">ui-link</span></td>
+      <td><a class="ui-link">a</a></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;input&gt;</code></th>
+      <td>form-control</td>
+      <td><span class="semantic-pill">light</span></td>
+      <td><span class="semantic-pill">ui-input</span></td>
+      <td><input class="ui-input">input</input></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;select&gt;</code></th>
+      <td>form-control</td>
+      <td><span class="semantic-pill">light</span></td>
+      <td><span class="semantic-pill">ui-select</span></td>
+      <td><select class="ui-select">select</select></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;textarea&gt;</code></th>
+      <td>form-control</td>
+      <td><span class="semantic-pill">light</span></td>
+      <td><span class="semantic-pill">ui-textarea</span></td>
+      <td><textarea class="ui-textarea">textarea</textarea></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;label&gt;</code></th>
+      <td>form-label</td>
+      <td><span class="semantic-pill">neutral</span></td>
+      <td><span class="semantic-pill">ui-label</span></td>
+      <td><label class="ui-label">label</label></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;table&gt;</code></th>
+      <td>data-table</td>
+      <td><span class="semantic-pill">slate</span></td>
+      <td><span class="semantic-pill">ui-table</span></td>
+      <td><table class="ui-table">table</table></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;thead&gt;</code></th>
+      <td>table-header</td>
+      <td><span class="semantic-pill">slate</span></td>
+      <td><span class="semantic-pill">ui-table-head</span></td>
+      <td><thead class="ui-table-head">thead</thead></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;tbody&gt;</code></th>
+      <td>table-body</td>
+      <td><span class="semantic-pill">slate</span></td>
+      <td><span class="semantic-pill">ui-table-body</span></td>
+      <td><tbody class="ui-table-body">tbody</tbody></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;tr&gt;</code></th>
+      <td>table-row</td>
+      <td><span class="semantic-pill">neutral</span></td>
+      <td><span class="semantic-pill">ui-table-row</span></td>
+      <td><tr class="ui-table-row">tr</tr></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;th&gt;</code></th>
+      <td>table-header-cell</td>
+      <td><span class="semantic-pill">neutral</span></td>
+      <td><span class="semantic-pill">ui-table-head-cell</span></td>
+      <td><th class="ui-table-head-cell">th</th></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;td&gt;</code></th>
+      <td>table-cell</td>
+      <td><span class="semantic-pill">neutral</span></td>
+      <td><span class="semantic-pill">ui-table-cell</span></td>
+      <td><td class="ui-table-cell">td</td></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;h1&gt;</code></th>
+      <td>heading</td>
+      <td><span class="semantic-pill">aurora</span></td>
+      <td><span class="semantic-pill">ui-h1</span></td>
+      <td><h1 class="ui-h1">h1</h1></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;h2&gt;</code></th>
+      <td>heading</td>
+      <td><span class="semantic-pill">aurora</span></td>
+      <td><span class="semantic-pill">ui-h2</span></td>
+      <td><h2 class="ui-h2">h2</h2></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;h3&gt;</code></th>
+      <td>heading</td>
+      <td><span class="semantic-pill">aurora</span></td>
+      <td><span class="semantic-pill">ui-h3</span></td>
+      <td><h3 class="ui-h3">h3</h3></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;h4&gt;</code></th>
+      <td>heading</td>
+      <td><span class="semantic-pill">aurora</span></td>
+      <td><span class="semantic-pill">ui-h4</span></td>
+      <td><h4 class="ui-h4">h4</h4></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;h5&gt;</code></th>
+      <td>heading</td>
+      <td><span class="semantic-pill">aurora</span></td>
+      <td><span class="semantic-pill">ui-h5</span></td>
+      <td><h5 class="ui-h5">h5</h5></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;h6&gt;</code></th>
+      <td>heading</td>
+      <td><span class="semantic-pill">aurora</span></td>
+      <td><span class="semantic-pill">ui-h6</span></td>
+      <td><h6 class="ui-h6">h6</h6></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;p&gt;</code></th>
+      <td>paragraph</td>
+      <td><span class="semantic-pill">neutral</span></td>
+      <td><span class="semantic-pill">ui-paragraph</span></td>
+      <td><p class="ui-paragraph">p</p></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;code&gt;</code></th>
+      <td>code</td>
+      <td><span class="semantic-pill">mono</span></td>
+      <td><span class="semantic-pill">ui-code</span></td>
+      <td><code class="ui-code">code</code></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;pre&gt;</code></th>
+      <td>code-block</td>
+      <td><span class="semantic-pill">mono</span></td>
+      <td><span class="semantic-pill">ui-pre</span></td>
+      <td><pre class="ui-pre">pre</pre></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;blockquote&gt;</code></th>
+      <td>quote</td>
+      <td><span class="semantic-pill">pearl</span></td>
+      <td><span class="semantic-pill">ui-quote</span></td>
+      <td><blockquote class="ui-quote">blockquote</blockquote></td>
+    </tr>
+  
+
+    <tr>
+      <th><code>&lt;form&gt;</code></th>
+      <td>form</td>
+      <td><span class="semantic-pill">brand</span></td>
+      <td><span class="semantic-pill">ui-form</span></td>
+      <td><form class="ui-form">form</form></td>
+    </tr>
+  
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
